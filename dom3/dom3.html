@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminador de elementos</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 8px 0;
+            padding: 8px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Eliminar elementos de una lista</h1>
+    <ul id="lista">
+        <li>verduras</li>
+        <li>carne</li>
+        <li>yogures</li>
+        <li>leche</li>
+        <li>masa madre</li>
+    </ul>
+    <button onclick="eliminarElemento()">Eliminar el último elemento</button>
+
+    <script>
+        function eliminarElemento() {
+            const lista = document.getElementById('lista');
+            
+           
+
+            if (lista.hasChildNodes()) {
+                
+
+                lista.removeChild(lista.lastChild);
+            } else {
+                alert('No hay más elementos para eliminar.');
+            }
+        }
+    </script>
+</body>
+</html>

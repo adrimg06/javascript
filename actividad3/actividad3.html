@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de fotos </title>
+    <link id="estilo" rel="stylesheet" href="actividad3-1.css">
+    <script>
+        function cambiaImagen(idImagen, nombre) {
+            document.getElementById(idImagen).src = nombre;
+        }
+        
+        function cambiaEstilo(estilo) {
+            document.getElementById('estilo').href = estilo;
+        }
+    </script>
+</head>
+<body>
+    <h2>Fotos Coches</h2>
+    <img id="imagenCoche" src="coche1.jpg" style="height:300px"><br>
+    <select onchange="cambiaImagen('imagenCoche', this.value)">
+        <option value="coche1.jpg">Coche 1</option>
+        <option value="coche2.jpg">Coche 2</option>
+        <option value="coche3.jpg">Coche 3</option>
+        <option value="coche4.jpg">Coche 4</option>
+        <option value="coche5.jpg">Coche 5</option>
+        <option value="coche6.jpg">Coche 6</option>
+    </select>
+    
+    <h2>fotos de Spiderman</h2>
+    <img id="imagenSpiderman" src="spiderman1.gif" style="height:300px"><br>
+    <select onchange="cambiaImagen('imagenSpiderman', this.value)">
+        <option value="spiderman1.gif">Spiderman 1</option>
+        <option value="spiderman2.jpg">Spiderman 2</option>
+        <option value="spiderman3.jpg">Spiderman 3</option>
+        <option value="spiderman4.jpg">Spiderman 4</option>
+        <option value="spiderman5.jpg">Spiderman 5</option>
+        <option value="spiderman4.jpg">Spiderman 6</option>
+    </select>
+    
+    <h2>Cambio de Estilos</h2>
+    <button onclick="cambiaEstilo('Estilo css 1')">Estilo1</button>
+    <button onclick="cambiaEstilo('Estilo css 2')">Estilo2</button>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5 - Básicos</title>
+    <style>
+        #parrafo {
+            font-size: 18px;
+        }
+        #mensaje {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid black;
+            width: 200px;
+            text-align: center;
+        }
+    </style>
+    <script src="actividad5.js"></script>
+</head>
+<body>
+    <h2>Cambia los estilos</h2>
+    <p id="parrafo">Me gustan los macarrones</p>
+    <button onclick="cambiarEstilo('Arial')">Arial</button>
+    <button onclick="cambiarEstilo('Courier New')">Courier New</button>
+    <button onclick="cambiarEstilo('Georgia')">Georgia</button>
+
+    <h2>Cambia la imagen</h2>
+    <img id="imagen" src="coche1.jpg" alt="Imagen" style="width:200px"><br>
+    <button onclick="cambiarImagen('coche1.jpg')">Imagen 1</button>
+    <button onclick="cambiarImagen('coche2.jpg')">Imagen 2</button>
+    <button onclick="cambiarImagen('coche3.jpg')">Imagen 3</button>
+
+    <h2>Visualiza el mensaje</h2>
+    <div id="mensaje">Ejemplo</div>
+    <button onclick="mostrarMensaje('Hola, me llamo Adrián!')">Opción 1</button>
+    <button onclick="mostrarMensaje('Esto es divertido!')">Opción 2</button>
+    <button onclick="mostrarMensaje('¡yujuuuuuu!')">Opción 3</button>
+</body>
+</html>

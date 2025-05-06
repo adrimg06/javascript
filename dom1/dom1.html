@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso al DOM</title>
+    <style>
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplo de acceso al DOM</h1>
+    <p class="content">Hola me llamo Adrián.</p>
+    <p class="content">Hola me llamo Rafa.</p>
+    <p class="content">Hola me llamo Mario.</p>
+
+    <button onclick="mostrarParrafos()">Mostrar contenido de los párrafos</button>
+
+    <div id="output"></div>
+
+    <script>
+        function mostrarParrafos() {
+            
+            const parrafos = document.getElementsByClassName('content');
+            let contenido = '';
+
+            
+            for (let i = 0; i < parrafos.length; i++) {
+                contenido += parrafos[i].textContent + '<br>';
+            }
+
+            
+            document.getElementById('output').innerHTML = contenido;
+        }
+    </script>
+</body>
+</html>
